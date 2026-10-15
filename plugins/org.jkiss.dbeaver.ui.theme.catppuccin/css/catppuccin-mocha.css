@@ -1,0 +1,341 @@
+/*
+ * Catppuccin Mocha
+ * base #1e1e2e  mantle #181825  crust #11111b
+ * surface0 #313244  surface1 #45475a  surface2 #585b70  overlay0 #6c7086
+ * text #cdd6f4  subtext0 #a6adc8
+ * blue #89b4fa  lavender #b4befe  mauve #cba6f7  green #a6e3a1  red #f38ba8
+ * peach #fab387  yellow #f9e2af  teal #94e2d5  sky #89dceb
+ */
+
+/* ---- Workbench colors (tabs, backgrounds) ---- */
+
+ColorDefinition#org-eclipse-ui-workbench-DARK_BACKGROUND { color: #1e1e2e; }
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_BG_START,
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_BG_END { color: #313244; }
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START,
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_BG_END { color: #181825; }
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_TEXT_COLOR { color: #cdd6f4; }
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_TEXT_COLOR { color: #a6adc8; }
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_OUTER_KEYLINE_COLOR,
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_INNER_KEYLINE_COLOR,
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_OUTLINE_COLOR { color: #11111b; }
+
+/* ---- Generic widgets ---- */
+
+Shell,
+Composite,
+Group,
+Label,
+CLabel,
+Link,
+Sash,
+ScrolledComposite,
+ExpandableComposite,
+.MPartStack,
+.MTrimBar,
+.MToolBar {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+Tree,
+Table,
+List,
+Text,
+StyledText,
+Combo,
+CCombo,
+Spinner,
+.MPart Table {
+    background-color: #181825;
+    color: #cdd6f4;
+}
+
+Button {
+    background-color: #313244;
+    color: #cdd6f4;
+}
+
+CTabFolder {
+    swt-selected-tab-highlight: #cba6f7;
+    swt-selected-highlight-top: false;
+    swt-simple: false; /* curved tab shape instead of square */
+    swt-unselected-hot-tab-color-background: #313244;
+    swt-unselected-tabs-color: #181825 #181825 100% 100%;
+    swt-selected-tab-fill: #1e1e2e;
+    swt-outer-keyline-color: #181825;
+    swt-inner-keyline-color: #181825;
+    swt-tab-outline: #181825;
+}
+
+/* Roomier tabs, macOS-like */
+#org-eclipse-ui-editorss {
+    swt-tab-height: 10px;
+}
+
+CTabItem,
+CTabItem CLabel {
+    background-color: #181825;
+    color: #a6adc8;
+}
+
+CTabItem:selected,
+CTabItem:selected CLabel {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+/* ---- Status bar, toolbars, search fields ---- */
+
+StatusLine,
+#org-eclipse-ui-StatusLine,
+#org-eclipse-ui-StatusLine CLabel,
+#org-eclipse-ui-ProgressBar,
+#org-eclipse-ui-ProgressBar Canvas {
+    background-color: #181825;
+    color: #a6adc8;
+}
+
+ToolBar {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+Text[style~='SWT.SEARCH'] {
+    background-color: #313244;
+    color: #cdd6f4;
+}
+
+Sash {
+    background-color: #11111b;
+}
+
+#org-eclipse-e4-ui-compatibility-editor Canvas,
+#org-eclipse-e4-ui-compatibility-editor Canvas > * {
+    background-color: #1e1e2e;
+}
+
+/* ---- DBeaver: SQL editor ---- */
+
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-text-background,
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-disabled-background { color: #1e1e2e; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-text-foreground { color: #cdd6f4; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-keyword-foreground { color: #cba6f7; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-string-foreground { color: #a6e3a1; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-number-foreground { color: #fab387; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-comment-foreground { color: #6c7086; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-datatype-foreground,
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-function-foreground { color: #89b4fa; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-schema-foreground { color: #f9e2af; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-column-derived-foreground,
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-column-foreground { color: #94e2d5; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-table-alias-foreground,
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-table-foreground { color: #f5c2e7; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-composite-field-foreground { color: #89dceb; }
+ColorDefinition#org-jkiss-dbeaver-sql-editor-color-semanticError-foreground { color: #f38ba8; }
+
+/* ---- Text editors (line numbers, current line, selection) ---- */
+
+IEclipsePreferences#org-eclipse-ui-editors:org-eclipse-ui-themes {
+    preferences:
+        'AbstractTextEditor.Color.Background.SystemDefault=false'
+        'AbstractTextEditor.Color.Foreground.SystemDefault=false'
+        'AbstractTextEditor.Color.SelectionBackground.SystemDefault=false'
+        'AbstractTextEditor.Color.SelectionForeground.SystemDefault=false'
+        'AbstractTextEditor.Color.Background=30,30,46'
+        'AbstractTextEditor.Color.Foreground=205,214,244'
+        'AbstractTextEditor.Color.SelectionBackground=69,71,90'
+        'AbstractTextEditor.Color.SelectionForeground=205,214,244'
+        'currentLineColor=49,50,68'
+        'lineNumberColor=108,112,134'
+        'printMarginColor=69,71,90'
+        'hyperlinkColor=137,180,250'
+        'hyperlinkColor.SystemDefault=false'
+        'searchResultIndicationColor=88,91,112'
+        'occurrenceIndicationColor=69,71,90'
+        'writeOccurrenceIndicationColor=69,71,90'
+}
+
+/* ---- Fonts (Inter UI, JetBrains Mono for code) ---- */
+
+FontDefinition#org-jkiss-dbeaver-dbeaver-ui-fonts-main {
+    font-family: 'Inter';
+    font-size: 13;
+}
+
+FontDefinition#org-jkiss-dbeaver-dbeaver-ui-fonts-monospace,
+FontDefinition#org-eclipse-jface-textfont {
+    font-family: 'JetBrains Mono';
+    font-size: 13;
+}
+
+/* ---- Result set grid ---- */
+
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-cell-odd-background { color: #181825; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-cell-modified-background { color: #5b4636; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-cell-error-background { color: #5c3040; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-cell-new-background { color: #2f4a3a; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-cell-deleted-background { color: #4a2b36; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-cell-matched-background { color: #5b5136; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-selection-background { color: #45475a; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-selection-foreground { color: #cdd6f4; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-lines-normal { color: #313244; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-lines-selected,
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-header-border { color: #45475a; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-header-background { color: #181825; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-header-foreground { color: #bac2de; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-header-selected-background { color: #313244; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-null-foreground { color: #6c7086; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-binary-foreground { color: #f9e2af; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-boolean-foreground { color: #fab387; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-datetime-foreground { color: #94e2d5; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-numeric-foreground { color: #fab387; }
+ColorDefinition#org-jkiss-dbeaver-sql-resultset-color-string-foreground { color: #cdd6f4; }
+
+/* ---- Navigator, transactions, accent ---- */
+
+ColorDefinition#org-jkiss-dbeaver-ui-navigator-node-foreground { color: #a6adc8; }
+ColorDefinition#org-jkiss-dbeaver-ui-navigator-node-transient-foreground { color: #a6e3a1; }
+ColorDefinition#org-jkiss-dbeaver-ui-navigator-node-new-background { color: #2f4a3a; }
+ColorDefinition#org-jkiss-dbeaver-ui-navigator-node-modified-background { color: #5b4636; }
+ColorDefinition#org-jkiss-dbeaver-ui-navigator-node-statistics-background { color: #45475a; }
+ColorDefinition#org-jkiss-dbeaver-txn-color-committed-background { color: #2f4a3a; }
+ColorDefinition#org-jkiss-dbeaver-txn-color-reverted-background { color: #4a2b36; }
+ColorDefinition#org-jkiss-dbeaver-txn-color-transaction-background { color: #5b4636; }
+ColorDefinition#org-jkiss-dbeaver-ui-general-accent { color: #cba6f7; }
+
+/* ---- ERD ---- */
+
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-background { color: #1e1e2e; }
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-entity-regular-background { color: #181825; }
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-entity-primary-background { color: #45475a; }
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-entity-association-background,
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-attributes-background,
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-notes-background { color: #313244; }
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-entity-name-foreground,
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-attributes-foreground,
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-notes-foreground { color: #cdd6f4; }
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-search-highlighting { color: #f9e2af; }
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-fk-highlighting { color: #a6e3a1; }
+ColorDefinition#org-jkiss-dbeaver-erd-diagram-lines-foreground { color: #89b4fa; }
+
+/* ---- Apply UI font directly on widgets (FontDefinition alone is not enough for trees/labels) ---- */
+
+Tree,
+Table,
+Label,
+CLabel,
+Button,
+Group,
+CTabItem,
+ToolBar,
+StatusLine,
+#org-eclipse-ui-StatusLine CLabel {
+    font-family: 'Inter';
+    font-size: 13;
+}
+
+/*
+ * ---- Override hard-coded greys of the Eclipse dark base theme ----
+ * The base theme (e4-dark_partstyle.css / e4-dark_globalstyle.css) and DBeaver's own prefstyle
+ * use fixed hex values in selectors more specific than the generic ones above, so they are repeated
+ * here with the .MTrimmedWindow prefix to win on specificity.
+ */
+
+.MTrimmedWindow .MPart,
+.MTrimmedWindow .MPart Composite,
+.MTrimmedWindow .MPart Composite > *,
+.MTrimmedWindow .MPart Composite > * > *,
+.MTrimmedWindow .MPart Label,
+.MTrimmedWindow .MPart ScrolledForm,
+.MTrimmedWindow .MPart Form,
+.MTrimmedWindow .MPart Section,
+.MTrimmedWindow .MPart FormText,
+.MTrimmedWindow .MPart Link,
+.MTrimmedWindow .MPart Sash,
+.MTrimmedWindow .MPart Button,
+.MTrimmedWindow .MPart Group,
+.MTrimmedWindow .MPart SashForm,
+.MTrimmedWindow .MPart PageSiteComposite,
+.MTrimmedWindow .MPart ListEditorComposite,
+.MTrimmedWindow .MPart ScrolledComposite,
+.MTrimmedWindow .MPart FigureCanvas,
+.MTrimmedWindow .MPart Section > Label {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+.MTrimmedWindow .MPart Tree,
+.MTrimmedWindow .MPart FilteredTree,
+.MTrimmedWindow .MPart RegistryFilteredTree,
+.MTrimmedWindow .MPart Section Tree,
+.MTrimmedWindow .MPart Table,
+.MTrimmedWindow .MPart Browser,
+.MTrimmedWindow .MPart ViewForm,
+.MTrimmedWindow .MPart ViewForm > CLabel,
+.MTrimmedWindow .MPart PageBook > Label,
+.MTrimmedWindow .MPart PageBook > SashForm,
+Shell Tree,
+Shell Table,
+Shell List,
+ViewerPane,
+DrillDownComposite {
+    background-color: #181825;
+    color: #cdd6f4;
+}
+
+.MTrimmedWindow .MPart CCombo,
+.MTrimmedWindow .MPart Spinner,
+.MTrimmedWindow .MPart Composite > StyledText,
+.MTrimmedWindow .MPart SashForm > Text[style~='SWT.BORDER'],
+.MTrimmedWindow .MPart DatePicker,
+Text[style~='SWT.SEARCH'] {
+    background-color: #313244;
+    color: #cdd6f4;
+}
+
+.MTrimmedWindow .MPart FormHeading,
+.MTrimmedWindow .MPart FormHeading > TitleRegion,
+.MTrimmedWindow .MPart FormHeading > TitleRegion > Label,
+.MTrimmedWindow .MPart FormHeading > CLabel {
+    background-color: #313244;
+    color: #b4befe;
+}
+
+#org-eclipse-e4-ui-compatibility-editor LayoutCanvas,
+#org-eclipse-ui-console-ConsoleView .MPart > Composite,
+#org-eclipse-ui-console-ConsoleView .MPart StyledText,
+#org-eclipse-ui-console-ConsoleView .MPart PageBook Label {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+/* ---- Main toolbar (top panel) ---- */
+
+.MTrimBar,
+.MToolBar,
+.MToolControl,
+.MTrimmedWindow > .MTrimBar,
+#org-eclipse-ui-main-toolbar {
+    background-color: #181825;
+    color: #cdd6f4;
+    font-family: 'Inter';
+    font-size: 12;
+}
+
+.MTrimBar ToolBar,
+.MTrimBar Composite,
+.MToolControl Composite,
+.MToolControl > * {
+    background-color: #181825;
+    color: #cdd6f4;
+}
+
+.MTrimBar Combo,
+.MTrimBar CCombo,
+.MToolControl Combo,
+.MToolControl CCombo,
+.MToolControl Text {
+    background-color: #313244;
+    color: #cdd6f4;
+}

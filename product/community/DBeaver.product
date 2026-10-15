@@ -9,8 +9,8 @@
     </configIni>
 
     <launcherArgs>
-        <programArgs></programArgs>
-        <programArgsMac>-vm ../Eclipse/jre/Contents/Home/lib/libjli.dylib</programArgsMac>
+        <programArgs>-nl en</programArgs>
+        <programArgsMac>-nl en -vm ../Eclipse/jre/Contents/Home/lib/libjli.dylib</programArgsMac>
 
         <vmArgs>
             -XX:+IgnoreUnrecognizedVMOptions

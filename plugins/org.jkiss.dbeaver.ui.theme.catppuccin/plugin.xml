@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <!-- Overrides the built-in "Dark" theme with the Catppuccin Mocha palette -->
+    <extension point="org.eclipse.e4.ui.css.swt.theme">
+        <stylesheet uri="css/catppuccin-mocha.css">
+            <themeid refid="org.eclipse.e4.ui.css.theme.e4_dark"/>
+        </stylesheet>
+    </extension>
+</plugin>

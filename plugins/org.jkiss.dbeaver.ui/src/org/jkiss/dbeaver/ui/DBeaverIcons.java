@@ -186,6 +186,9 @@ public class DBeaverIcons {
         if (icon == null) {
             try {
                 ImageDescriptor imageDescriptor = ImageDescriptor.createFromURL(URI.create(location).toURL());
+                if (UIStyles.isDarkTheme()) {
+                    imageDescriptor = IconTint.tint(imageDescriptor);
+                }
                 icon = new IconDescriptor(location, imageDescriptor);
                 imageMap.put(location, icon);
             } catch (Exception e) {

@@ -1,17 +1,16 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_3814_5222)">
-<path d="M2.01973 2C2.01973 2 1.97973 15 2.01973 15H13.9997V2H2.01973ZM2.99973 14V3H12.9997V14H2.99973Z" fill="#3387C5"/>
-<path d="M11.9995 6H4.01953V7H11.9995V6Z" fill="#3387C5"/>
-<path d="M4 1V4H5V1H4Z" fill="#3387C5"/>
-<path d="M6 1V4H7V1H6Z" fill="#3387C5"/>
-<path d="M8 1V4H9V1H8Z" fill="#3387C5"/>
-<path d="M10 1V4H11V1H10Z" fill="#3387C5"/>
-<path d="M11.9995 9H4.01953V10H11.9995V9Z" fill="#3387C5"/>
-<path d="M11.9895 12H4.01953V13H11.9895V12Z" fill="#3387C5"/>
-</g>
-<defs>
-<clipPath id="clip0_3814_5222">
-<rect width="12" height="14" fill="white" transform="translate(2 1)"/>
-</clipPath>
-</defs>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cba6f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 10.27 7 3.34" />
+  <path d="m11 13.73-4 6.93" />
+  <path d="M12 22v-2" />
+  <path d="M12 2v2" />
+  <path d="M14 12h8" />
+  <path d="m17 20.66-1-1.73" />
+  <path d="m17 3.34-1 1.73" />
+  <path d="M2 12h2" />
+  <path d="m20.66 17-1.73-1" />
+  <path d="m20.66 7-1.73 1" />
+  <path d="m3.34 17 1.73-1" />
+  <path d="m3.34 7 1.73 1" />
+  <circle cx="12" cy="12" r="2" />
+  <circle cx="12" cy="12" r="8" />
 </svg>
